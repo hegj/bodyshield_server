@@ -1,0 +1,622 @@
+{
+	"id": 20,
+	"instruction": "下面有80个问题,是了解你是怎样看待你自己的。请你决定哪些问题符合你的实际情况,哪些问题不符合你的实际情况。如果你认为某一个问题符合或基本符合你的实际情况,就在选择“是”,如果不符合或基本不符合你的实际情况,选择“否”。对于每一个问题你只能作一种回答,并且每个问题都应该回答。",
+	"marking": "PHCSS",
+	"name": "儿童自我意识量表",
+	"question":[{
+		"id":1,
+		"question":"我的同学嘲弄我",
+		"answers":[
+			{"id":1,"name":"是","score":0},
+			{"id":2,"name":"否","score":1}
+
+
+		]
+
+	},{
+		"id":2,
+		"question":"我是一个幸福的人",
+		"answers":[
+			{"id":1,"name":"是","score":1},
+			{"id":2,"name":"否","score":0}
+		]
+	}
+	,{
+			"id":3,
+			"question":"我很难交朋友",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		}
+	,{
+			"id":4,
+			"question":"我经常悲伤",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":5,
+			"question":"我聪明",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":6,
+			"question":"我害羞",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":7,
+			"question":"当老师找我时,我感到紧张",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":8,
+			"question":"我的容貌使我烦恼",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		}
+	,{
+			"id":9,
+			"question":"我长大后将成为一个重要的人物",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		}
+	,{
+			"id":10,
+			"question":"当学校要考试时,我就烦恼",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		}
+	,{
+			"id":11,
+			"question":"我和别人合不来",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		}
+	,{
+			"id":12,
+			"question":"在学校里我表现好",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		}
+	,{
+			"id":13,
+			"question":"当某件事做错了常常是我的过错",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":14,
+			"question":"我给家里带来麻烦",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		}
+	,{
+			"id":15,
+			"question":"我是强壮的",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		}
+	,{
+			"id":16,
+			"question":"我常常有好主意",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		}
+	,{
+			"id":17,
+			"question":"我在家里是重要的一员",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":18,
+			"question":"我常常想按自己的主意办事",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		}
+	,{
+			"id":19,
+			"question":"我善干做手工劳动",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		}
+	,{
+			"id":20,
+			"question":"我易于泄气",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":21,
+			"question":"我的学校作业做得好",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":22,
+			"question":"我做许多坏事",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":23,
+			"question":"我很会画画",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":24,
+			"question":"在音乐方面我不错",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":25,
+			"question":"我在家表现不好",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":26,
+			"question":"我完成学校作业很慢",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":27,
+			"question":"在班上我是一个重要的人",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":28,
+			"question":"我容易紧张",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":29,
+			"question":"我有一双漂亮的眼睛",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":30,
+			"question":"在全班同学面前讲话我可以讲得很好",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":31,
+			"question":"在学校我是一个幻想家",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":32,
+			"question":"我常常捉弄我的兄弟姐妹",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":33,
+			"question":"我的朋友喜欢我的主意",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":34,
+			"question":"我常常遇到麻烦",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":35,
+			"question":"在家里我听话",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":36,
+			"question":"我运气好",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":37,
+			"question":"我常常很担忧",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":38,
+			"question":"我的父母对我期望过高",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":39,
+			"question":"我喜欢按自己的方式做事",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":40,
+			"question":"我觉得自己做事丢三拉四",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":41,
+			"question":"我的头发很好",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":42,
+			"question":"在学校我自愿做一些事",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":43,
+			"question":"我希望我与众不同",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":44,
+			"question":"我晚上睡得好",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":45,
+			"question":"我讨厌学校",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":46,
+			"question":"在游戏活动中我是最后被选入的成员之一",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":47,
+			"question":"我常常生病",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":48,
+			"question":"我常常对别人小气",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":49,
+			"question":"在学校里同学们认为我有好主意",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":50,
+			"question":"我不高兴",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":51,
+			"question":"我有许多朋友",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":52,
+			"question":"我快乐",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":53,
+			"question":"对大多数事我不发表意见",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":54,
+			"question":"我长得漂亮",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":55,
+			"question":"我精力充沛",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":56,
+			"question":"我常常打架",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":57,
+			"question":"我与男孩子合得来",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":58,
+			"question":"别人常常捉弄我",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":59,
+			"question":"我家里对我失望",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":60,
+			"question":"我有一张令人愉快的脸",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":61,
+			"question":"当我要做什么事时总觉得不顺心",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":62,
+			"question":"在家里我常常被捉弄",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":63,
+			"question":"在游戏和体育活动中我是一个带头人",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":64,
+			"question":"我笨拙",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":65,
+			"question":"在游戏和体育活动中我只看不参加",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":66,
+			"question":"我常常忘记我所学的东西",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":67,
+			"question":"我容易与别人相处",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":68,
+			"question":"我容易发脾气",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":69,
+			"question":"我与女孩子合得来",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":70,
+			"question":"我喜欢阅读",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":71,
+			"question":"我宁愿独自干事,而不愿与许多人一起做事情",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":72,
+			"question":"我喜欢我的兄弟姐妹",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":73,
+			"question":"我的身材好",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":74,
+			"question":"我常常害怕",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":75,
+			"question":"我总是跌坏东西或打坏东西",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":76,
+			"question":"我能得到别人的信任",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		} ,{
+			"id":77,
+			"question":"我与众不同",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":78,
+			"question":"我常常有一些坏的想法",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":79,
+			"question":"我容易哭叫",
+			"answers":[
+				{"id":1,"name":"是","score":0},
+				{"id":2,"name":"否","score":1}
+			]
+		} ,{
+			"id":80,
+			"question":"我是一个好人",
+			"answers":[
+				{"id":1,"name":"是","score":1},
+				{"id":2,"name":"否","score":0}
+			]
+		}
+	],"factorClassifyList": [
+	{
+		"name":"儿童自我意识量表总分说明",
+		"item":[
+			12,13,14,21,22,25,34,35,38,45,48,56,59,62,78,80,5,7,9,12,16,17,21,26,27,30,31,33,42,49,53,66,70,5,8,15,29,33,41,49,54,57,60,63,69,73,4,6,7,8,10,20,28,37,39,40,43,50,74,79,1,3,6,11,40,46,49,51,58,65,69,77,2,8,36,39,43,50,52,60,67,80
+		]
+	},
+	{"name":"行为", "item":[
+		12,13,14,21,22,25,34,35,38,45,48,56,59,62,78,80
+	]
+	},
+	{
+		"name":"智力与学校情况",
+		"item":[
+			5,7,9,12,16,17,21,26,27,30,31,33,42,49,53,66,70
+		]
+	},
+	{
+		"name":"躯体与外貌属性",
+		"item":[
+			8,15,29,33,41,49,54,57,60,63,69,73
+		]
+	},{
+		"name":"焦虑",
+		"item":[
+			4,6,7,8,10,20,28,37,39,40,43,50,74,79
+		]
+	},{
+		"name":"合群",
+		"item":[
+			1,3,6,11,40,46,49,51,58,65,69,77
+		]
+	},{
+		"name":"幸福与满足",
+		"item":[
+			2,8,36,39,43,50,52,60,67,80
+		]
+	}
+]
+
+}

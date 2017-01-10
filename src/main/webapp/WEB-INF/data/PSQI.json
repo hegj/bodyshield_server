@@ -1,0 +1,170 @@
+{
+    "id": 13,
+    "instruction": "",
+    "marking": "PSQI",
+    "name": "匹兹堡睡眠质量",
+    "question":[{
+		"id":1,
+		"question":"近1个月，晚上上床睡觉通常是＿点钟。",
+		"type" : 2
+		
+		 
+	},{
+		"id":2,
+		"question":"近1个月，从上床到入睡通常需要＿分钟",
+		 "type" : 2
+		
+	},{
+		"id":3,
+		"question":"近1个月，通常早上＿点起床",
+		 "type" : 2
+		 
+	},{
+		"id":4,
+		"question":"近1个月，每夜通常实际睡眠＿小时（不等于卧床时间）",
+		  "type" : 2
+   },{
+		"id":5,
+		"question":"人睡困难(30分钟内不能入睡)",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"无","score":0},
+		            {"id":2,"name":" <1次／周","score":1},
+		            {"id":3,"name":"1-2次／周","score":2}
+		            {"id":4,"name":"≥3次／周","score":3}
+		          ]
+	},{
+		"id":6,
+		"question":"夜间易醒或早醒",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"无","score":0},
+		            {"id":2,"name":" <1次／周","score":1},
+		            {"id":3,"name":"1-2次／周","score":2}
+		            {"id":4,"name":"≥3次／周","score":3}
+		          ]
+		 
+	},{
+		"id":7,
+		"question":"夜间去厕所",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"无","score":0},
+		            {"id":2,"name":" <1次／周","score":1},
+		            {"id":3,"name":"1-2次／周","score":2}
+		            {"id":4,"name":"≥3次／周","score":3}
+		          ]
+		 
+	},{
+		"id":8,
+		"question":"呼吸不畅",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"无","score":0},
+		            {"id":2,"name":" <1次／周","score":1},
+		            {"id":3,"name":"1-2次／周","score":2}
+		            {"id":4,"name":"≥3次／周","score":3}
+		          ]
+	},{
+		"id":9,
+		"question":"咳嗽或奸声高",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"无","score":0},
+		            {"id":2,"name":" <1次／周","score":1},
+		            {"id":3,"name":"1-2次／周","score":2}
+		            {"id":4,"name":"≥3次／周","score":3}
+		          ]
+	},{
+		"id":10,
+		"question":"感觉冷",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"无","score":0},
+		            {"id":2,"name":" <1次／周","score":1},
+		            {"id":3,"name":"1-2次／周","score":2}
+		            {"id":4,"name":"≥3次／周","score":3}
+		          ]
+	},{
+		"id":11,
+		"question":"感觉热",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"无","score":0},
+		            {"id":2,"name":" <1次／周","score":1},
+		            {"id":3,"name":"1-2次／周","score":2}
+		            {"id":4,"name":"≥3次／周","score":3}
+		          ]
+	},{
+		"id":12,
+		"question":"做恶梦",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"无","score":0},
+		            {"id":2,"name":" <1次／周","score":1},
+		            {"id":3,"name":"1-2次／周","score":2}
+		            {"id":4,"name":"≥3次／周","score":3}
+		          ]
+	},{
+		"id":13,
+		"question":" 疼痛不适",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"无","score":0},
+		            {"id":2,"name":" <1次／周","score":1},
+		            {"id":3,"name":"1-2次／周","score":2}
+		            {"id":4,"name":"≥3次／周","score":3}
+		          ]
+	},{
+		"id":14,
+		"question":"其他影响睡眠的事情",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"无","score":0},
+		            {"id":2,"name":" <1次／周","score":1},
+		            {"id":3,"name":"1-2次／周","score":2}
+		            {"id":4,"name":"≥3次／周","score":3}
+		          ]
+	},{
+		"id":15,
+		"question":"总的来说，您认为自己的睡眠质量",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"很好","score":0},
+		            {"id":2,"name":" 较好","score":1},
+		            {"id":3,"name":"较差","score":2}
+		            {"id":4,"name":"很差","score":3}
+		          ]
+	},{
+		"id":16,
+		"question":"近1个月，您用药物催眠的情况",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"无","score":0},
+		            {"id":2,"name":" <1次／周","score":1},
+		            {"id":3,"name":"1-2次／周","score":2}
+		            {"id":4,"name":"≥3次／周","score":3}
+		          ]
+	},{
+		"id":17,
+		"question":"近1个月，您常感到困倦吗",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"无","score":0},
+		            {"id":2,"name":" <1次／周","score":1},
+		            {"id":3,"name":"1-2次／周","score":2}
+		            {"id":4,"name":"≥3次／周","score":3}
+		          ]
+	},{
+		"id":18,
+		"question":"近1个月，您做事情的精力不足吗",
+		"type" : 0,
+		"answers":[
+		           {"id":1,"name":"没有","score":0},
+		            {"id":2,"name":" 偶尔有","score":1},
+		            {"id":3,"name":"有时有","score":2}
+		            {"id":4,"name":"经常有","score":3}
+		          ]
+	}
+       ]
+}
