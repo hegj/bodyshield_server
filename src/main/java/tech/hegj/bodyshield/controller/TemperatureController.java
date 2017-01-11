@@ -1,9 +1,18 @@
 package tech.hegj.bodyshield.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.ui.ModelMap;
@@ -28,6 +37,8 @@ public class TemperatureController extends BaseController {
 	
 	@Autowired
 	TemperatureService temperatureService;
+	@Value(value="/resources/HID-master.zip")
+    private  Resource firmware;
 	
 	@RequestMapping(value = "/upload/data", method = RequestMethod.POST)
 	public Object uploadHistoryData(@RequestParam("data") String data,ModelMap modelMap) {
@@ -53,46 +64,12 @@ public class TemperatureController extends BaseController {
 		return modelMap;
 	}
 	
-	@RequestMapping(value = "/feedback", method = RequestMethod.POST)
-	public Object feedback(ModelMap modelMap) {
-		try{
-			int uid = getInt("uid", 0);
-			String deviceAddress = getString("deviceAddress", "");
-			long lastTimestamp = getLong("lastTimestamp", 0L);
-			modelMap = temperatureService.list(uid, deviceAddress, lastTimestamp, modelMap);
-		}catch(Exception ex){
-			handlerSysError(modelMap, ex);
-		}
-		return modelMap;
+	@RequestMapping(value = "/download/firmware")
+	public ResponseEntity<byte[]> download() throws IOException {
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+		headers.setContentDispositionFormData("attachment", "firmware.zip");
+		return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(firmware.getFile()), headers, HttpStatus.CREATED);
 	}
-	
-//	
-//	public static void main(String args[])  
-//    {  
-//        JavaMailSenderImpl senderImpl = new JavaMailSenderImpl();  
-//        // 设定mail server  
-//        senderImpl.setHost("smtp.163.com");  
-//  
-//        // 建立邮件消息  
-//        SimpleMailMessage mailMessage = new SimpleMailMessage();  
-//        // 设置收件人，寄件人 用数组发送多个邮件  
-//        // String[] array = new String[] {"sun111@163.com","sun222@sohu.com"};  
-//        // mailMessage.setTo(array);  
-//        mailMessage.setTo("337418794@qq.com");  
-//        mailMessage.setFrom("13632772770@163.com");  
-//        mailMessage.setSubject(" 测试简单文本邮件发送！ ");  
-//        mailMessage.setText(" 测试我的简单邮件发送机制！！ ");  
-//  
-//        senderImpl.setUsername("13632772770@163.com"); // 根据自己的情况,设置username  
-//        senderImpl.setPassword("2009150278"); // 根据自己的情况, 设置password  
-//  
-//        Properties prop = new Properties();  
-//        prop.put("mail.smtp.auth", "true"); // 将这个参数设为true，让服务器进行认证,认证用户名和密码是否正确  
-//        prop.put("mail.smtp.timeout", "25000");  
-//        senderImpl.setJavaMailProperties(prop);  
-//        // 发送邮件  
-//        senderImpl.send(mailMessage);  
-//  
-//        System.out.println(" 邮件发送成功.. ");  
-//    }  
+	 
 }

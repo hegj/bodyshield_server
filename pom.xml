@@ -8,7 +8,7 @@
     <version>1.0</version>
     <name>bodyshield</name>
     <packaging>war</packaging>
-    <description>Spring OAuth2 Server</description>
+    <description>bodyshield Server</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,9 +40,10 @@
 
 
     <build>
-        <finalName>bodyshield</finalName>
+        <!-- <finalName>bodyshield</finalName> -->
+        <finalName>ts</finalName>
 		<filters>
-			<filter>config/test.properties</filter>
+			<filter>config/dev.properties</filter>
 		</filters>
         <plugins>
             <plugin>
