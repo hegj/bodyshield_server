@@ -77,7 +77,7 @@ public class UserServiceImpl implements UserService {
 			modelMap.put(Keys.RETURN_CODE, ErrorCode.SYSTEM_ERROR);
 			modelMap.put(Keys.MESSAGE, "用户名或密码错误");
 		}
-		return null;
+		return modelMap;
 	}
 	
 	
