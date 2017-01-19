@@ -53,7 +53,8 @@ public class UserDaoImpl extends BaseDao implements UserDao{
 		StringBuilder sql = new StringBuilder("select * from user ");
 		sql.append("where name=? ");
 		Object[] params = {name};
-		return jdbcTemplate.queryForObject(sql.toString(), rowMapper, params);
+		
+		return queryForObject(sql.toString(), rowMapper, params);
 	}
 
 	@Override
@@ -62,7 +63,7 @@ public class UserDaoImpl extends BaseDao implements UserDao{
 		sql.append("where name=? ");
 		sql.append("and password=? ");
 		Object[] params = {name,password};
-		return jdbcTemplate.queryForObject(sql.toString(), rowMapper, params);
+		return queryForObject(sql.toString(), rowMapper, params);
 	}
 
 	@Override
@@ -79,7 +80,7 @@ public class UserDaoImpl extends BaseDao implements UserDao{
 			return null;
 		}
 		Object[] params = {openid};
-		return jdbcTemplate.queryForObject(sql.toString(), rowMapper, params);
+		return queryForObject(sql.toString(), rowMapper, params);
 	}
 
 	@Override

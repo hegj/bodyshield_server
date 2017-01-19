@@ -68,9 +68,15 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public ModelMap login(String name, String password, ModelMap modelMap) throws Exception {
+	public ModelMap login(String name, String password, HttpServletRequest request, ModelMap modelMap) throws Exception {
 		User user = userDao.login(name, password);
 		if(user != null){
+			if(StringUtils.isNotBlank(user.getHeadImg()) && user.getHeadImg().indexOf("http://") == -1){
+				String url=request.getScheme()+"://" + request.getServerName() //服务器地址    
+		        + ":"     
+		        + request.getServerPort()+request.getContextPath();
+				user.setHeadImg(url+"/imgs/headImg/"+user.getHeadImg());
+			}
 			modelMap.put(Keys.RETURN_CODE, ErrorCode.OK);
 			modelMap.put(Keys.DATA, user);
 		}else {

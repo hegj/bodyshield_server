@@ -78,7 +78,7 @@ public class UserController extends BaseController {
 		try{
 			String name = getString("name", "");
 			String password = getString("password", "");
-			modelMap = userService.login(name, password, modelMap);
+			modelMap = userService.login(name, password,request, modelMap);
 		}catch(Exception ex){
 			handlerSysError(modelMap, ex);
 		}

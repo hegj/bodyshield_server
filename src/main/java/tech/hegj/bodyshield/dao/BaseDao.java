@@ -6,10 +6,13 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -54,6 +57,17 @@ public class BaseDao {
 		if(rs != null && rs.next()){
 			result = rs.getString(1);
 		}
+		return result;
+	}
+	
+	public <T> T queryForObject(String sql, RowMapper<T> rowMapper, Object... params){
+		T result = null;
+		try {
+			result = jdbcTemplate.queryForObject(sql.toString(), rowMapper, params);
+		} catch (DataAccessException e) {
+			return null;
+		}
+		
 		return result;
 	}
 	
