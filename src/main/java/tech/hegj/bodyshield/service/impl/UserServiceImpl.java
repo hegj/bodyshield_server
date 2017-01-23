@@ -135,10 +135,11 @@ public class UserServiceImpl implements UserService {
 		return modelMap;
 	}
 	
-	private void sendMail(String subject, String text) throws Exception{
+	private static void sendMail(String subject, String text) throws Exception{
 		JavaMailSenderImpl senderImpl = new JavaMailSenderImpl();  
         // 设定mail server  
-        senderImpl.setHost("smtp.163.com");  
+//        senderImpl.setHost("smtp.163.com");  
+		senderImpl.setHost("smtp.126.com");
   
         // 建立邮件消息  
         SimpleMailMessage mailMessage = new SimpleMailMessage();  
@@ -149,10 +150,12 @@ public class UserServiceImpl implements UserService {
         mailMessage.setFrom("13632772770@163.com");  
         mailMessage.setSubject(subject);  
         mailMessage.setText(text);  
-  
-        senderImpl.setUsername("13632772770@163.com"); // 根据自己的情况,设置username  
-        senderImpl.setPassword("2009150278"); // 根据自己的情况, 设置password  
-  
+        
+//        senderImpl.setUsername("13632772770@163.com"); // 根据自己的情况,设置username  
+//        senderImpl.setPassword("2009150278"); // 根据自己的情况, 设置password  
+        senderImpl.setUsername("qxinlidev@126.com"); // 根据自己的情况,设置username  
+        senderImpl.setPassword("comqxinli"); // 根据自己的情况, 设置password 
+        
         Properties prop = new Properties();  
         prop.put("mail.smtp.auth", "true"); // 将这个参数设为true，让服务器进行认证,认证用户名和密码是否正确  
         prop.put("mail.smtp.timeout", "25000");  
@@ -174,5 +177,9 @@ public class UserServiceImpl implements UserService {
 			modelMap.put(Keys.MESSAGE, "修改头像失败");
 		}
 		return modelMap;
+	}
+	
+	public static void main(String[] args) throws Exception{
+		sendMail("hello", "ttsttttt");
 	}
 }
