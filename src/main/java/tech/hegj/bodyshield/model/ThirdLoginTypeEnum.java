@@ -2,8 +2,8 @@ package tech.hegj.bodyshield.model;
 
 public enum ThirdLoginTypeEnum{
 	WX(1,"微信"),
-	QQ(1,"QQ"),
-	FACEBOOK(2,"facebook");
+	QQ(2,"QQ"),
+	FACEBOOK(3,"facebook");
 	private int id;
 	private String desc;
 

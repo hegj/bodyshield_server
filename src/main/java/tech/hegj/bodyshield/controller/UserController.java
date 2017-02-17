@@ -126,9 +126,9 @@ public class UserController extends BaseController {
 	public Object feedback(ModelMap modelMap) {
 		try{
 			int uid = getInt("uid", 0);
-			String subject = getString("subject", "");
+			String contact = getString("contact", "");
 			String content = getString("content", "");
-			modelMap = userService.feedback(subject, content, uid, modelMap);
+			modelMap = userService.feedback(contact, content, uid, modelMap);
 		}catch(Exception ex){
 			handlerSysError(modelMap, ex);
 		}

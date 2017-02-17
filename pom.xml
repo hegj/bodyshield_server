@@ -41,7 +41,7 @@
 
     <build>
         <!-- <finalName>bodyshield</finalName> -->
-        <finalName>ts</finalName>
+        <finalName>bodyshield</finalName>
 		<filters>
 			<filter>config/dev.properties</filter>
 		</filters>

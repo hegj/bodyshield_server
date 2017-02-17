@@ -2,6 +2,7 @@ package tech.hegj.bodyshield.service.impl;
 
 import java.util.Properties;
 
+import javax.security.auth.Subject;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang.StringUtils;
@@ -129,7 +130,9 @@ public class UserServiceImpl implements UserService {
 		return modelMap;
 	}
 	
-	public ModelMap feedback(String subject, String content, int uid, ModelMap modelMap) throws Exception {
+	public ModelMap feedback(String contact, String content, int uid, ModelMap modelMap) throws Exception {
+		String subject = "来自用户【" + uid + "】的反馈";
+		content = content + "\r\n联系方式：" + contact;
 		sendMail(subject, content);
 		modelMap.put(Keys.RETURN_CODE, ErrorCode.OK);
 		return modelMap;
@@ -151,10 +154,10 @@ public class UserServiceImpl implements UserService {
         mailMessage.setSubject(subject);  
         mailMessage.setText(text);  
         
-//        senderImpl.setUsername("13632772770@163.com"); // 根据自己的情况,设置username  
-//        senderImpl.setPassword("2009150278"); // 根据自己的情况, 设置password  
-        senderImpl.setUsername("qxinlidev@126.com"); // 根据自己的情况,设置username  
-        senderImpl.setPassword("comqxinli"); // 根据自己的情况, 设置password 
+        senderImpl.setUsername("13632772770@163.com"); // 根据自己的情况,设置username  
+        senderImpl.setPassword("2009150278"); // 根据自己的情况, 设置password  
+//        senderImpl.setUsername("qxinlidev@126.com"); // 根据自己的情况,设置username  
+//        senderImpl.setPassword("comqxinli"); // 根据自己的情况, 设置password 
         
         Properties prop = new Properties();  
         prop.put("mail.smtp.auth", "true"); // 将这个参数设为true，让服务器进行认证,认证用户名和密码是否正确  

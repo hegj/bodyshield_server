@@ -18,6 +18,6 @@ public interface UserService {
 	public ModelMap checkName(String name, ModelMap modelMap) throws Exception;
 	public ModelMap login(String name, String password, HttpServletRequest request, ModelMap modelMap) throws Exception;
 	public ModelMap thirdLogin(String openid, String name, int thirdLoginType, String headImg, ModelMap modelMap) throws Exception;
-	public ModelMap feedback(String subject, String content, int uid, ModelMap modelMap) throws Exception;
+	public ModelMap feedback(String contact, String content, int uid, ModelMap modelMap) throws Exception;
 	public ModelMap updateHeadImg(String headImg, int uid,HttpServletRequest request, ModelMap modelMap) throws Exception;
 }

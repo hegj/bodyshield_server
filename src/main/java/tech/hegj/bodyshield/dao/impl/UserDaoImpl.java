@@ -91,4 +91,13 @@ public class UserDaoImpl extends BaseDao implements UserDao{
 		Object[] params = {img, uid};
 		return jdbcTemplate.update(sql.toString(), params);
 	}
+
+	@Override
+	public User get(int uid) throws Exception {
+		StringBuilder sql = new StringBuilder("select * from user ");
+		sql.append("where id=? ");
+		Object[] params = {uid};
+		
+		return queryForObject(sql.toString(), rowMapper, params);
+	}
 }
