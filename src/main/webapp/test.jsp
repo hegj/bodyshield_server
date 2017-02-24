@@ -11,8 +11,8 @@
 </head>
 <body>
 <h2>File Upload</h2>
-		<form id="fileuploadForm" action="user/upload/headImg.json" method="POST" enctype="multipart/form-data">
-		<input id="uid" name="uid" value="2" type="hidden" />
+		<form id="fileuploadForm" action="user/upload/headImg.json?uid=2" method="POST" enctype="multipart/form-data">
+		<!-- <input id="uid" name="uid" value="40" type="hidden" /> -->
 			<div class="header">
 		  		<h2>Form</h2>
 			</div>

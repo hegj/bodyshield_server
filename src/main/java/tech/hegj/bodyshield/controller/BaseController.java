@@ -50,7 +50,7 @@ public class BaseController {
 	public ModelMap handlerSysError(ModelMap modelMap,Exception ex){
 		modelMap.addAttribute(Keys.RETURN_CODE,ErrorCode.SYSTEM_ERROR);
 		if(ex != null){
-			logger.error(ex.getMessage(),ex);
+			ex.printStackTrace();
 			modelMap.addAttribute(Keys.MESSAGE,ex.getMessage() == null?"系统错误":ex.getMessage());
 			//ExcHandler.sendException(ex, ErrorLevelEnum.FALAL_ERROR);
 		}else{

@@ -2,7 +2,13 @@ package tech.hegj.bodyshield.service.impl;
 
 import java.util.Properties;
 
-import javax.security.auth.Subject;
+import javax.mail.Address;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang.StringUtils;
@@ -133,7 +139,7 @@ public class UserServiceImpl implements UserService {
 	public ModelMap feedback(String contact, String content, int uid, ModelMap modelMap) throws Exception {
 		String subject = "来自用户【" + uid + "】的反馈";
 		content = content + "\r\n联系方式：" + contact;
-		sendMail(subject, content);
+		sendEmail(subject, content);
 		modelMap.put(Keys.RETURN_CODE, ErrorCode.OK);
 		return modelMap;
 	}
@@ -165,6 +171,34 @@ public class UserServiceImpl implements UserService {
         senderImpl.setJavaMailProperties(prop);  
         // 发送邮件  
         senderImpl.send(mailMessage); 
+	}
+	
+	private static void sendEmail(String subject, String text) throws Exception{
+		try{  
+		      String[] to = {"support@apexto.com"};
+		      String from = "support@apexto.com";
+		      String host = "localhost";
+		      Properties props = System.getProperties();
+		      props.put("mail.smtp.host", host);
+		      props.put("mail.smtp.port", 25);
+		      Session session;
+		      session = Session.getDefaultInstance(props, null);
+		      session.setDebug(true);
+		      MimeMessage msg = new MimeMessage(session);
+		      msg.setFrom(new InternetAddress(from));
+
+		      Address[] address = new InternetAddress[to.length];
+		      for (int i = 0; i < to.length; ++i) {
+		        address[i] = new InternetAddress(to[i]);
+		      }
+		      msg.setRecipients(Message.RecipientType.TO,address);
+		      msg.setSubject(subject);	
+		      msg.setText(text);
+		      Transport.send(msg);
+		    }
+		    catch (MessagingException mex)
+		    {
+		    }
 	}
 
 	@Override
