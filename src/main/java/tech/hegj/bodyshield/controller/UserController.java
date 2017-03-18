@@ -85,6 +85,18 @@ public class UserController extends BaseController {
 		return modelMap;
 	}
 	
+	@RequestMapping(value = "/modify/password", method = RequestMethod.POST)
+	public Object modifyPassword(ModelMap modelMap) {
+		try{
+			String name = getString("name", "");
+			String password = getString("password", "");
+			modelMap = userService.updatePassword(name, password, modelMap);
+		}catch(Exception ex){
+			handlerSysError(modelMap, ex);
+		}
+		return modelMap;
+	}
+	
 	@RequestMapping(value="upload/headImg", method=RequestMethod.POST)
 	public Object processUpload(@RequestParam MultipartFile file, ModelMap modelMap){
 		try {

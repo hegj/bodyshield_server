@@ -100,4 +100,13 @@ public class UserDaoImpl extends BaseDao implements UserDao{
 		
 		return queryForObject(sql.toString(), rowMapper, params);
 	}
+
+	@Override
+	public int updatePassword(String name, String password) throws Exception {
+		StringBuilder sql = new StringBuilder("update user ");
+		sql.append("set password=? ");
+		sql.append("where name=? ");
+		Object[] params = {password, name};
+		return jdbcTemplate.update(sql.toString(), params);
+	}
 }

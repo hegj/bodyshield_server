@@ -20,4 +20,5 @@ public interface UserService {
 	public ModelMap thirdLogin(String openid, String name, int thirdLoginType, String headImg, ModelMap modelMap) throws Exception;
 	public ModelMap feedback(String contact, String content, int uid, ModelMap modelMap) throws Exception;
 	public ModelMap updateHeadImg(String headImg, int uid,HttpServletRequest request, ModelMap modelMap) throws Exception;
+	public ModelMap updatePassword(String name, String password, ModelMap modelMap) throws Exception;
 }

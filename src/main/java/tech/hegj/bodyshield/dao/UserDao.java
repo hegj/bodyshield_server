@@ -14,4 +14,5 @@ public interface UserDao {
 	public User login(String name, String password) throws Exception;
 	public User getByOpenid(String openid, int thirdLoginType) throws Exception;
 	public int updateHeadImg(int uid, String img) throws Exception;
+	public int updatePassword(String name, String password) throws Exception;
 }

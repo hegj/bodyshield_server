@@ -219,4 +219,20 @@ public class UserServiceImpl implements UserService {
 	public static void main(String[] args) throws Exception{
 		sendMail("hello", "ttsttttt");
 	}
+
+	@Override
+	public ModelMap updatePassword(String name, String password, ModelMap modelMap) throws Exception {
+		if(StringUtils.isBlank(name) || StringUtils.isBlank(password)){
+			modelMap.put(Keys.RETURN_CODE, ErrorCode.SYSTEM_ERROR);
+			modelMap.put(Keys.MESSAGE, "用户名密码不能为空");
+			return modelMap;
+		}
+		if(userDao.updatePassword(name, password) > 0){
+			modelMap.put(Keys.RETURN_CODE, ErrorCode.OK);
+		}else{
+			modelMap.put(Keys.RETURN_CODE, ErrorCode.SYSTEM_ERROR);
+			modelMap.put(Keys.MESSAGE, "修改密码失败");
+		}
+		return modelMap;
+	}
 }
