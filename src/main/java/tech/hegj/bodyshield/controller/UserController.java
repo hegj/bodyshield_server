@@ -89,7 +89,7 @@ public class UserController extends BaseController {
 	public Object modifyPassword(ModelMap modelMap) {
 		try{
 			String name = getString("name", "");
-			String password = getString("password", "");
+			String password = getString("newPassword", "");
 			modelMap = userService.updatePassword(name, password, modelMap);
 		}catch(Exception ex){
 			handlerSysError(modelMap, ex);
