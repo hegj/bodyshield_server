@@ -1,23 +1,11 @@
 package tech.hegj.bodyshield.service.impl;
 
-import java.util.Properties;
-
-import javax.mail.Address;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
-
 import tech.hegj.bodyshield.config.ErrorCode;
 import tech.hegj.bodyshield.config.Keys;
 import tech.hegj.bodyshield.dao.UserDao;
@@ -25,6 +13,9 @@ import tech.hegj.bodyshield.model.SexEnum;
 import tech.hegj.bodyshield.model.ThirdLoginTypeEnum;
 import tech.hegj.bodyshield.model.User;
 import tech.hegj.bodyshield.service.UserService;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Properties;
 
 /**
  * 
@@ -126,8 +117,11 @@ public class UserServiceImpl implements UserService {
 				modelMap.put(Keys.MESSAGE, "登录类型出错");
 				return modelMap;
 			}
-			if(userDao.add(user) > 0){
+			int id = userDao.add(user);
+			if(id > 0){
+				user.setId(id);
 				modelMap.put(Keys.RETURN_CODE, ErrorCode.OK);
+				modelMap.put(Keys.DATA, user);
 			}else {
 				modelMap.put(Keys.RETURN_CODE, ErrorCode.SYSTEM_ERROR);
 				modelMap.put(Keys.MESSAGE, "注册失败");
@@ -173,32 +167,57 @@ public class UserServiceImpl implements UserService {
         senderImpl.send(mailMessage); 
 	}
 	
-	private static void sendEmail(String subject, String text) throws Exception{
-		try{  
-		      String[] to = {"support@apexto.com"};
-		      String from = "support@apexto.com";
-		      String host = "localhost";
-		      Properties props = System.getProperties();
-		      props.put("mail.smtp.host", host);
-		      props.put("mail.smtp.port", 25);
-		      Session session;
-		      session = Session.getDefaultInstance(props, null);
-		      session.setDebug(true);
-		      MimeMessage msg = new MimeMessage(session);
-		      msg.setFrom(new InternetAddress(from));
+//	private static void sendEmail(String subject, String text) throws Exception{
+//		try{
+//		      String[] to = {"support@apexto.com"};
+//		      String from = "support@apexto.com";
+//		      String host = "localhost";
+//		      Properties props = System.getProperties();
+//		      props.put("mail.smtp.host", host);
+//		      props.put("mail.smtp.port", 25);
+//		      Session session;
+//		      session = Session.getDefaultInstance(props, null);
+//		      session.setDebug(true);
+//		      MimeMessage msg = new MimeMessage(session);
+//		      msg.setFrom(new InternetAddress(from));
+//
+//		      Address[] address = new InternetAddress[to.length];
+//		      for (int i = 0; i < to.length; ++i) {
+//		        address[i] = new InternetAddress(to[i]);
+//		      }
+//		      msg.setRecipients(Message.RecipientType.TO,address);
+//		      msg.setSubject(subject);
+//		      msg.setText(text);
+//		      Transport.send(msg);
+//		    }
+//		    catch (MessagingException mex)
+//		    {
+//		    }
+//	}
+	private static void sendEmail(String subject, String text) throws Exception {
+		JavaMailSenderImpl senderImpl = new JavaMailSenderImpl();
+		// 设定mail server
+		senderImpl.setHost("smtp.qiye.163.com");
 
-		      Address[] address = new InternetAddress[to.length];
-		      for (int i = 0; i < to.length; ++i) {
-		        address[i] = new InternetAddress(to[i]);
-		      }
-		      msg.setRecipients(Message.RecipientType.TO,address);
-		      msg.setSubject(subject);	
-		      msg.setText(text);
-		      Transport.send(msg);
-		    }
-		    catch (MessagingException mex)
-		    {
-		    }
+		// 建立邮件消息
+		SimpleMailMessage mailMessage = new SimpleMailMessage();
+		// 设置收件人，寄件人 用数组发送多个邮件
+		// String[] array = new String[] {"sun111@163.com","sun222@sohu.com"};
+		// mailMessage.setTo(array);
+		mailMessage.setTo("support@apexto.com");
+		mailMessage.setFrom("support@apexto.com");
+		mailMessage.setSubject(subject);
+		mailMessage.setText(text);
+
+		senderImpl.setUsername("support@apexto.com"); // 根据自己的情况,设置username
+		senderImpl.setPassword("Apexto0.4"); // 根据自己的情况, 设置password
+
+		Properties prop = new Properties();
+		prop.put("mail.smtp.auth", "true"); // 将这个参数设为true，让服务器进行认证,认证用户名和密码是否正确
+		prop.put("mail.smtp.timeout", "25000");
+		senderImpl.setJavaMailProperties(prop);
+		// 发送邮件
+		senderImpl.send(mailMessage);
 	}
 
 	@Override
